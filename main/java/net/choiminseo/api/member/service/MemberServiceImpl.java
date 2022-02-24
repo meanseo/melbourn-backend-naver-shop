@@ -1,5 +1,7 @@
 package net.choiminseo.api.member.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * packageName: net.choiminseo.api.member.service
  * fileName   : MemberServiceImpl
@@ -11,6 +13,8 @@ package net.choiminseo.api.member.service;
  * ================================
  * 2022-02-11     최민서        최초 생성
  */
+
+@Service
 public class MemberServiceImpl implements MemberService {
 
     @Override
@@ -51,5 +55,20 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public String deletePoint() {
         return "";
+    }
+
+    @Override
+    public String calc() {
+        return null;
+    }
+
+    @Override
+    public String bmi() {
+        return null;
+    }
+
+    @Override
+    public String grade() {
+        return null;
     }
 }

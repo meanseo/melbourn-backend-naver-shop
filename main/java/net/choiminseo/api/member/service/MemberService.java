@@ -11,6 +11,7 @@ package net.choiminseo.api.member.service;
  * ================================
  * 2022-02-11     최민서        최초 생성
  */
+
 public interface MemberService {
     String memberList();
     String memberInfo();
@@ -20,4 +21,7 @@ public interface MemberService {
     String showPoint();
     String getPoint();
     String deletePoint();
+    String calc();
+    String bmi();
+    String grade();
 }
