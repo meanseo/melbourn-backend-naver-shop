@@ -1,6 +1,7 @@
 package net.choiminseo.api.member.controller;
 
 import lombok.RequiredArgsConstructor;
+import net.choiminseo.api.buy.domain.CalcDTO;
 import net.choiminseo.api.member.domain.MemberDTO;
 import net.choiminseo.api.member.service.MemberService;
 import org.springframework.web.bind.annotation.*;
@@ -18,17 +19,28 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/member")
 public class MemberController {
 
     private final MemberService service;
 
-    @GetMapping("/member/bmi/{name}/{height}/{weight}")
-    public String getBmi(@PathVariable String name,
-                         @PathVariable double height,
-                         @PathVariable double weight){
-        System.out.println(" 리액트에서 넘어온 이름: "+ name);
-        System.out.println(" 리액트에서 넘어온 키: "+ height);
-        System.out.println(" 리액트에서 넘어온 몸무게: "+ weight);
-        return "BMI 는 정상";
+    @PostMapping("/bmi") public String getBmi(@RequestBody MemberDTO member){
+        return service.bmi(member);
     }
+
+    @PostMapping("/calc") public String calc(@RequestBody CalcDTO calc){
+
+        return service.calc(calc);
+    }
+
+    @PostMapping ("/login")
+    public String login(@RequestBody MemberDTO member){
+        return service.login(member);
+    }
+
+    @PostMapping("/grade")
+    public String getGrade(@RequestBody MemberDTO member){
+        return service.grade(member);
+    }
+
 }

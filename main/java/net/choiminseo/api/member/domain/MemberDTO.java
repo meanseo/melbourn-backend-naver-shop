@@ -25,4 +25,9 @@ public class MemberDTO {
     private double weight;
     private String regdate;
 
+    private int kor;
+    private int eng;
+    private int math;
+    private String  password;
+    private String id;
 }

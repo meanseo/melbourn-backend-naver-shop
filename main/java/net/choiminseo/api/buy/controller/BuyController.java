@@ -1,5 +1,8 @@
 package net.choiminseo.api.buy.controller;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 /**
  * packageName: net.choiminseo.api.buy.controller
  * fileName   : BuyController
@@ -11,5 +14,7 @@ package net.choiminseo.api.buy.controller;
  * ================================
  * 2022-02-11     최민서        최초 생성
  */
+@RestController
+@RequestMapping("/buy")
 public class BuyController {
 }

@@ -1,5 +1,7 @@
 package net.choiminseo.api.buy.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * packageName: net.choiminseo.api.buy.service
  * fileName   : BuyServiceImpl
@@ -11,5 +13,6 @@ package net.choiminseo.api.buy.service;
  * ================================
  * 2022-02-11     최민서        최초 생성
  */
+@Service
 public class BuyServiceImpl{
 }
